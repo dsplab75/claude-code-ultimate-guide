@@ -2021,7 +2021,7 @@ Le modèle par défaut dépend de votre abonnement : les abonnés **Max/Team Pre
 
 **Réalité des coûts** : Une session typique d'une heure coûte **0,10 $ - 0,50 $** selon les habitudes d'utilisation.
 
-> **Dépréciations de modèles (fév. 2026)** : `claude-3-haiku-20240307` (Claude 3 Haiku) a été déprécié le **19 février 2026** avec une **mise hors service prévue au 20 avril 2026**. Si votre CLAUDE.md, vos définitions d'agents ou vos scripts référencent en dur cet identifiant de modèle, migrez vers `claude-haiku-4-5-20251001` (Haiku 4.5) avant avril 2026. Source : [platform.claude.com/docs/model-deprecations](https://platform.claude.com/docs/model-deprecations)
+> **Dépréciations de modèles (fév. 2026)** : `claude-3-haiku-20240307` (Claude 3 Haiku) a été déprécié le **19 février 2026** avec une **mise hors service prévue au 20 avril 2026**. Si votre CLAUDE.md, vos définitions d'agents ou vos scripts référencent en dur cet identifiant de modèle, migrez vers `claude-haiku-4-5-20251001` (Haiku 4.5) avant avril 2026. Source : [platform.claude.com/docs/en/release-notes/model-deprecations](https://platform.claude.com/docs/en/release-notes/model-deprecations)
 
 #### 200K vs 1M de contexte : performance, coût et cas d'usage
 
@@ -16687,7 +16687,7 @@ neonctl branches delete feature-payments
 
 **Voir aussi :**
 - [Guide de configuration des branches de base de données](../examples/workflows/database-branch-setup.md) - Flux de travail complets par fournisseur
-- [Neon Branching](https://neon.tech/docs/guides/branching) - Documentation officielle Neon
+- [Neon Branching](https://neon.com/docs/introduction/branching) - Documentation officielle Neon
 - [PlanetScale Branching](https://planetscale.com/docs/concepts/branching) - Guide officiel PlanetScale
 
 ### Coordination de Worktrees Parallèles : Dépendances entre Tâches
@@ -23278,7 +23278,7 @@ Une série de 9 livres blancs thématiques couvrant Claude Code en profondeur, d
 | 07 | Guide de référence | Synthèse complète + flux de travail |
 | 08 | Équipes d'agents | Orchestration multi-agents |
 
-→ **[Télécharger tous les livres blancs (FR + EN)](https://www.florian.bruniaux.com/guides)**
+→ **[Télécharger tous les livres blancs (FR + EN)](https://cc.bruniaux.com/whitepapers/)**
 
 ---
 

@@ -722,7 +722,7 @@ assigned:me is:unresolved             # issues assigned to you
 
 **Resources**:
 - **GitHub**: https://github.com/getsentry/sentry-mcp
-- **Sentry MCP Docs**: https://docs.sentry.io/integrations/mcp/
+- **Sentry MCP Docs**: https://docs.sentry.io/product/sentry-mcp/
 - **Reference File**: `examples/skills/mcp-integration-reference/references/sentry-mcp.md`
 - **Auth Token Setup**: https://sentry.io/settings/account/api/auth-tokens/
 
