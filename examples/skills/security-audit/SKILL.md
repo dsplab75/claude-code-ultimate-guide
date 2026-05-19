@@ -38,7 +38,7 @@ If the user doesn't answer or is unsure, default to **production** (conservative
 
 ### Phase 1: Configuration Security (via /security-check)
 
-Execute all checks from `/security-check` (the `examples/commands/security-check.md` command). This covers:
+Execute all checks from `/security-check` (the `examples/skills/security-check/SKILL.md` command). This covers:
 - MCP server audit against CVE database
 - Skills & agents against known malicious entries
 - Hook exfiltration patterns
@@ -276,7 +276,7 @@ Your score vs security-hardening.md recommendations:
 
 ### 📚 References
 - Security hardening guide: guide/security-hardening.md
-- Threat database: examples/commands/resources/threat-db.yaml
+- Threat database: examples/skills/update-threat-db/threat-db.yaml
 - Quick check: `/security-check`
 - MCP scan tool: `npx mcp-scan` (Snyk)
 ```

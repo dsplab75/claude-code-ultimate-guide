@@ -10,7 +10,7 @@ disable-model-invocation: true
 
 Research and update the AI agent security threat intelligence database with the latest threats, CVEs, malicious skills, and campaigns.
 
-**Time**: 3-8 minutes | **Scope**: `examples/commands/resources/threat-db.yaml`
+**Time**: 3-8 minutes | **Scope**: `examples/skills/update-threat-db/threat-db.yaml`
 
 > Requires Perplexity MCP (or manual web search). Run monthly or after major security advisories.
 
@@ -25,7 +25,7 @@ You are a threat intelligence analyst specializing in AI coding agent security. 
 Read the current threat database:
 
 ```
-Read examples/commands/resources/threat-db.yaml
+Read examples/skills/update-threat-db/threat-db.yaml
 ```
 
 Note:
@@ -106,7 +106,7 @@ Apply changes following these rules:
 
 **Important**: After editing, validate YAML:
 ```bash
-python3 -c "import yaml; yaml.safe_load(open('examples/commands/resources/threat-db.yaml')); print('YAML valid')"
+python3 -c "import yaml; yaml.safe_load(open('examples/skills/update-threat-db/threat-db.yaml')); print('YAML valid')"
 ```
 
 ---
@@ -117,7 +117,7 @@ Check if new CVEs should also be added to the security hardening guide:
 
 ```bash
 # Count current CVEs in threat-db vs security-hardening
-grep -c "id:" examples/commands/resources/threat-db.yaml
+grep -c "id:" examples/skills/update-threat-db/threat-db.yaml
 grep -c "CVE-" guide/security-hardening.md
 ```
 
