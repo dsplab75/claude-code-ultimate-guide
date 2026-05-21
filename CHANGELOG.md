@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+### Fixed
+
+- **`scripts/generate-guide-exports.sh` — PDF build fails with Typst 0.14+** (`font fallback list must not be empty`). Pandoc's default Typst template leaves `mainfont`/`monofont` empty unless they are set via metadata, and Typst 0.14 made an empty font list a hard error (it was tolerated in 0.13, which is the version bundled with current Quarto on macOS). Added `-V mainfont="Libertinus Serif"` and `-V monofont="DejaVu Sans Mono"` to the `pandoc` invocation — both fonts are available out of the box on macOS and on Ubuntu (`fonts-libertinus` is pulled in by the `pandoc` apt package, `fonts-dejavu` is preinstalled). Verified end-to-end on Ubuntu 25.10 with pandoc 3.1.11 + standalone Typst 0.14.2: PDF builds successfully (556 pages, 8.4 MB) from `guide/ultimate-guide.md` v3.40.0.
+
 ### Documentation
 
 - **Agent Harness Engineering (new page `guide/core/agent-harness.md`)**: New reference page covering the nine-component framework (while-loop engine, context management, tool registry, sub-agent management, built-in skills, session persistence, dynamic prompt assembly, lifecycle hooks, permission enforcement) and the three foundational properties from arXiv 2605.18747 (executability, inspectability, statefulness). Includes the Lethal Trifecta security model (Willison), CI/CD agentic patterns comparison (GitHub Agentic Workflows / AWS Bedrock AgentCore / GitLab Duo), digital twin testing landscape by service (Slack-Mock, Mockoon, WireMock), OTel GenAI observability stack (gen_ai.client stable, gen_ai.agent experimental as of May 2026), test distribution anti-pattern (70% effort on deterministic / <5% on LLM reasoning), and creator-verifier pattern (+12 to +26% correctness improvement). 8 new anchors added to `machine-readable/reference.yaml`.
