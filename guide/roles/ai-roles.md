@@ -369,6 +369,18 @@ Periodic agents that scan the codebase for: outdated documentation, architectura
 
 Without a harness, AI agents produce code that individually looks fine but collectively drifts away from your architecture, your patterns, and your documentation. The harness is what makes "AI generates most of the code" sustainable at scale rather than a path to unmaintainable systems.
 
+### The formal framework (arXiv 2605.18747, May 2026)
+
+"Code as Agent Harness" (arXiv 2605.18747) formalizes three properties that a production harness must satisfy. These serve as evaluation criteria when choosing between harness frameworks or assessing whether an internal toolchain qualifies as a harness rather than a wrapper.
+
+**Executability.** The harness actually runs the code the model produces and verifies the result objectively. Text or code generation alone does not qualify. A harness that validates syntax but not behavior fails this property. Anthropic SDK, OpenAI Agents SDK, and LangGraph each implement the while-loop execution engine that makes executability concrete.
+
+**Inspectability.** Every step the agent takes is traceable for diagnosis and feedback generation. OpenInference (maintained by Arize) and OpenLLMetry (Traceloop) are the two instrumentation layers that standardize this property within the OpenTelemetry ecosystem. The OTel GenAI SIG defines `gen_ai.client` spans as stable and `gen_ai.agent` spans as experimental as of May 2026.
+
+**Statefulness.** The harness maintains continuity between sessions and sequential tool calls. Without statefulness, each agent interaction starts blind, forcing re-discovery of context that was already established. E2B and Northflank implement this at the infrastructure level; Anthropic Claude Managed Agents and AWS Bedrock AgentCore implement it at the product level.
+
+Martin Fowler summarizes the distinction precisely: "A raw model is not an agent. It becomes one when connected to a harness." O'Reilly characterizes the harness as "the new frontier of reliable AI systems" (2026). Nine concrete components make up a prod-grade harness: while-loop engine, context management, tool registry, sub-agent management, built-in skills, session persistence, dynamic prompt assembly, lifecycle hooks, and permission enforcement.
+
 ### Organizational impact
 
 This role pushes toward **intentional technological convergence**: organizations with 2-3 primary tech stacks benefit far more from standardized harnesses than organizations with 10 different stacks. It's a deliberate trade of technical freedom for reliability.
