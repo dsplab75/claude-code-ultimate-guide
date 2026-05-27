@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+### Added
+
+- **New page: Agent Tools Beyond Claude Code** (`guide/ecosystem/agentic-tools.md`, 2026-05-27): Comprehensive coverage of the agent tool field, organized in five sections. Section 1 covers terminal coding agents (Codex CLI at 86K stars, Hermes Agent formerly OpenClaw at 170K stars, Aider at 45K stars, Goose cross-ref). Section 2 covers autonomous coding agents (Devin with cloud sandbox and ACU billing, SWE-agent Princeton NeurIPS 2024, Claude Code headless cross-ref). Section 3 covers multi-agent frameworks (CrewAI 52K stars, LangGraph 33K stars, AutoGen/Microsoft Agent Framework). Section 4 covers orchestration tooling (Conductor Gemini methodology, Conductor Microsoft YAML CLI, Hermes Control Room community template). Section 5 is a decision framework with a full comparison matrix (10 tools across 7 dimensions) and a situation-to-tool guide. Cross-refs added to ai-ecosystem.md (Section 11, Section 11.3), third-party-tools.md (Multi-Agent Orchestration), and guide/README.md navigation.
+
 ### Security
 
 - **New section 1.6 in security-hardening.md**: Third-Party Command Wrappers & Shell Interceptors. Covers the attack surface of token-saving wrappers (RTK and similar), shell function overrides (oh-my-zsh plugins), completion frameworks (Fig, Warp), and how to audit each. Includes supply chain hygiene for CLI tools (`brew pin`, `cargo --locked`, checksum verification), minimal shell setup for sensitive sessions, and context separation (no production credentials in agent sessions).
